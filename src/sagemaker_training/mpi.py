@@ -283,7 +283,8 @@ class MasterRunner(process.ProcessRunner):
         )
 
         logger.info("Network interface name: %s" % self._network_interface_name)
-
+        logger.info(f"hosts list before sorted: ", host_list)
+        host_list.sort()
         command = [
             "mpirun",
             "--host",
